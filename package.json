@@ -1,0 +1,25 @@
+{
+  "name": "e2eautomationwithplaywright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kagaju-debby/E2EAutomationWithPlaywright.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kagaju-debby/E2EAutomationWithPlaywright/issues"
+  },
+  "homepage": "https://github.com/Kagaju-debby/E2EAutomationWithPlaywright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.22.2",
+    "allure-commandline": "^2.17.2",
+    "allure-playwright": "^2.0.0-beta.16"
+  }
+}
