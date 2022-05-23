@@ -11,4 +11,9 @@ export class InventoryItemPage{
         return new InventoryPage();
     }
 
+    async clickBackToProductsButton (page){
+        await page.locator(this.backToProductsButttonLocator).click();
+        return new InventoryPage();
+    }
+
 }
