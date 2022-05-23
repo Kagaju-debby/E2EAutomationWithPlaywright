@@ -6,7 +6,12 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test --reporter=line,allure-playwright",
+    "testInHeadedMode": "playwright test --headed --reporter=line,allure-playwright",
+    "allureReport": "allure generate ./allure-results --clean",
+    "openReport": "allure open ./allure-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kagaju-debby/E2EAutomationWithPlaywright.git"
