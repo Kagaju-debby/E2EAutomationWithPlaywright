@@ -1,0 +1,23 @@
+{
+    "homePageTabTitle": "Swag Labs",
+    "Url": "https://www.saucedemo.com/",
+    "userNameStandardUser":"standard_user",
+    "userNameLockedOutUser":"locked_out_user",
+    "password":"secret_sauce",
+    "item1_name": "Sauce Labs Backpack",
+    "item2_name": "Sauce Labs Onesie",
+    "filterByNameAZ":"az",
+    "filterByeNameZA":"za",
+    "addToCartButtonText":"Add to cart",
+    "firstname":"Deborah",
+    "lastname":"kagaju",
+    "zipcode":"000",
+    "checkoutCompleteTitle":"CHECKOUT:COMPLETE!",
+    "successOrderingMessage": "THANK YOU FOR YOUR ORDER",
+    "itemLeftInCartPrice":"Item total: $7.99",
+    "itemTotalPrice":"Total: $8.63",
+    "filterByPriceLH":"lohi",
+    "filterByPriceHL":"hilo",
+    "userName_LockedOutUser":"locked_out_user",
+    "failLogin": "Epic sadface: Sorry, this user has been locked out."
+}
