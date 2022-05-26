@@ -48,6 +48,31 @@ test.describe('Validation 1', ()=>{
         await inventoryPage.findItemByName(page, requiredData.item1_name);
         await cartPage.RemoveItemFromCart(page);
 
+        //Step6: Validate in the checkout overview that it only contains items you want to purchase
+        await inventoryPage.clickToCart(page);
+        await expect(page.locator(cartPage.onesieLocator)).toHaveText(requiredData.item2_name);
+
+        //Step7: Validate in the checkout overview that item total is right
+        await cartPage.ClickCheckout(page);
+        checkoutStepOnePage.fillCustomerInfo(
+            page,
+            requiredData.firstname,
+            requiredData.lastname,
+            requiredData.zipcode
+        );
+        await expect(page.locator(checkoutStepTwoPage.subItemTotalLocator)).toHaveText(requiredData.itemLeftInCartPrice);
+        await expect(page.locator(checkoutStepTwoPage.itemTotalLocator)).toHaveText(requiredData.itemTotalPrice);
+
+        //Step8: finish the purchase
+        await checkoutStepTwoPage.clickFinishButton(page);
+
+        //Validate that the website confirms the order
+        await expect(page.locator(checkoutCompletePage.checkoutCompleteTitleLocator)).toHaveText(requiredData.checkoutCompleteTitle);
+        await expect(page.locator(checkoutCompletePage.successMessageLocator)).toHaveText(requiredData.successOrderingMessage);
+            
+
+
+
         
     })
 } )
