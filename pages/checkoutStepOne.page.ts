@@ -1,17 +1,17 @@
-import {CheckoutStepTwoPage} from "./checkoutStepTwo.page";
+import { CheckoutStepTwoPage } from "./checkoutStepTwo.page";
+
 
 export class CheckoutStepOnePage{
-    firstNameLocator = "#first-name";
-    lastNameLocator = "#last-name";
-    zipCodeLocator = "postal-code";
-    continueButtonLocator = "#continue";
+    firstNameLocator = '#first-name';
+    lastNameLocator = '#last-name';
+    zipCodeLocator = '#postal-code';
+    continueLocator = '#continue';
 
-    async fillCustomerInfo(page, firstname:string, lastname:string, zipcode:string){
-        await page.fill(this.firstNameLocator, firstname);
-        await page.fill(this.lastNameLocator, lastname);
-        await page.fill(this.zipCodeLocator, zipcode);
-        await page.locator(this.continueButtonLocator).click();
+    async enterPersonalInformation(page, firstName:string, lastName:string, zipCode:string){
+        await page.fill(this.firstNameLocator, firstName);
+        await page.fill(this.lastNameLocator, lastName);
+        await page.fill(this.zipCodeLocator, zipCode);
+        await page.locator(this.continueLocator).click();
         return new CheckoutStepTwoPage();
     }
-
 }

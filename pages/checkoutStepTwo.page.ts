@@ -1,13 +1,13 @@
-import {CheckoutCompletePage} from "./checkoutComplete.page";
+import { CheckoutComletePage } from "./checkoutComplete.page";
 
 export class CheckoutStepTwoPage{
-    subItemTotalLocator = '//div[@class = "summary_subtotal_label"]';
-    itemTotalLocator = '//div[@class = "summary_total_label"]';
-    finishButtonLocator = "#finish";
+    finishLocator = '//button[@data-test="finish"]'
+    itemSubTotalLocator = '//div[@class="summary_subtotal_label"]'
+    itemTotalLocator = '//div[@class="summary_total_label"]'
 
+    
     async clickFinishButton(page){
-        await page.locator(this.finishButtonLocator).click();
-        return new CheckoutCompletePage();
+        await page.locator(this.finishLocator).click();
+        return new CheckoutComletePage();
     }
-
 }
