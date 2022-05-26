@@ -7,7 +7,6 @@ export class InventoryItemPage{
 
     async addItemToCart (page, locator:string){
         await page.locator(locator).click();
-        await page.locator(this.backToProductsButttonLocator).click();
         return new InventoryPage();
     }
 
