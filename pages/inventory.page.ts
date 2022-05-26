@@ -14,6 +14,12 @@ export class InventoryPage{
         await page.locator(this.cartLocator).click();
         return new CartPage();
     }
+
+    async filterItemByName(page, itemValue:string){
+        await page.selectOption(this.filterLocator, itemValue);
+
+    }
+
 }
 
   

@@ -1,5 +1,5 @@
 export class CheckoutCompletePage {
-    checkoutCompleteLocator= '//span[@class = "title"]';
+    checkoutCompleteTitleLocator= '//span[@class = "title"]';
     successMessageLocator = '//h2[@class = "complete-header"]';
 
 }

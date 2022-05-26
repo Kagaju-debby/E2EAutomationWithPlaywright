@@ -5,7 +5,7 @@ export class CheckoutStepTwoPage{
     itemTotalLocator = '//div[@class = "summary_total_label"]';
     finishButtonLocator = "#finish";
 
-    async checkout(page){
+    async clickFinishButton(page){
         await page.locator(this.finishButtonLocator).click();
         return new CheckoutCompletePage();
     }
